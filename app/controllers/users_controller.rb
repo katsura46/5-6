@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   before_action :ensure_correct_user, only: [:update, :edit]
-  before_action :set_user, only: %I[show edit update destroy followings followers]
 
 
   def show
