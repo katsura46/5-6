@@ -20,13 +20,16 @@
           <% if book.favorite?(current_user) %>
             <%= link_to book_favorites_path(book.id), method: :delete do %>
               <span style="color:red;">❤︎</span>
+              <%= book.favorites.count %> いいね
             <% end %>
           <% else %>
             <%= link_to book_favorites_path(book.id), method: :post do %>
               <span>❤︎</span>
+              <%= book.favorites.count %> いいね
             <% end %>
           <% end %>
         </td>
+        <td>コメント数: <%= book.book_comments.count %></td>
       </tr>
     <% end %>
   </tbody>
