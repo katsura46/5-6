@@ -1,8 +1,8 @@
  <table>
     <tr>
       <td>
-        <%= form_with(model: [book, comment]) do |f| %>
-          <%= f.text_area :comment, size: "100x5" %>
+        <%= form_with(model: [book, comment], local: false) do |f| %>
+          <%= f.text_area :comment, size: "100x5", class: "comment-textarea" %>
           <%= f.submit '送信' %>
         <% end %>
       </td>

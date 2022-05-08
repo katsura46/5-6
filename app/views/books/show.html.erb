@@ -27,9 +27,9 @@
           <td>コメント数: <%= @book.book_comments.count %></td>
         </tr>
       </table>
-    <% @comments.each do |comment| %>
-      <%= render 'book_comments/comment', book: @book, comment: comment %>
-    <% end %>
+      <div class="book-comments-index">
+        <%= render 'book_comments/comment', book: @book %>
+      </div>
 
     <%= render 'book_comments/form', book: @book, comment: @comment %>
 
